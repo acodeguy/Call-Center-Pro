@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	 <PreferenceCategory
+	 	android:key="key_service_settings"
+	 	android:title="Service settings">
+	 		<CheckBoxPreference
+ 			android:key="key_voicemail_notifier"
+ 			android:title="Voicemail reminder"
+ 			android:summary="Audible/tactile reminders for voicemail"
+ 			android:defaultValue="false">
+ 			</CheckBoxPreference>
+ 			<ListPreference
+ 				android:key="key_reminder_freq"
+ 				android:title="Reminder frequency"
+ 				android:summary="How often do you want to hear a reminder?"
+ 				android:dependency="@+id/key_voicemail_notifier"
+ 				android:entries="@array/reminder_freq_entries"
+ 				android:entryValues="@array/reminder_freq_values">
+ 			</ListPreference>
+	 </PreferenceCategory>
+  	<!-- 		
+  	<PreferenceCategory
+  		android:key="profiles"
+  		android:title="Profiles settings" >
+  		<CheckBoxPreference
+  			android:key="blacklist_"
+  			android:title="title"
+  			android:summary="summary" />
+  	</PreferenceCategory>
+  		
+  	<PreferenceCategory
+  		android:key="blacklist"
+  		android:title="Blacklist" >
+  		<CheckBoxPreference
+  			android:key="blacklist_"
+  			android:title="title"
+  			android:summary="summary" />
+  	</PreferenceCategory>
+  	 -->
+</PreferenceScreen>

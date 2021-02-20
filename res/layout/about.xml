@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dip">
+	
+	<TextView
+		android:id="@+id/app_title_ver"
+		android:text="Call Center Pro v"
+		android:textColor="#00FFFF" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		style="@style/text"/>
+	
+	<ImageButton
+		android:id="@+id/btn_visit_site"
+		android:src="@drawable/rslogo"
+		android:layout_below="@id/app_title_ver"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true" />
+
+	<TextView
+		android:id="@+id/blurb"
+		android:text="Please rate this app. Click the Reptile Soft logo to send an email to report bugs, and submit any feedback so this app can be improved!" 
+		android:padding="15dip"
+		android:layout_below="@id/btn_visit_site"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		style="@style/text"
+		/>
+	
+	<Button
+		android:id="@+id/btn_rs_apps"
+		android:text="Other apps by Reptile Soft"
+		android:layout_below="@id/blurb"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true">
+	</Button>
+</RelativeLayout>

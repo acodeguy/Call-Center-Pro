@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:padding="20dip">
+  	
+  	<TableLayout
+  		android:id="@+id/tbl_profile"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content">
+  		
+  		<TableRow>
+	  		<TextView
+	  			android:layout_width="fill_parent"
+	  			android:layout_height="wrap_content"
+	  			android:text="Quick select:" />
+  		</TableRow>
+  		
+  		<TableRow>
+  			<Spinner
+    			android:id="@+id/spinner_qs_ringer_mode"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+				android:prompt="@string/prompt_ringer_mode" />
+  		</TableRow>
+  	</TableLayout>
+  	
+  	<TableLayout
+  		android:id="@+id/tbl_blacklist"
+  		android:layout_below="@id/tbl_profile"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:paddingTop="10dip" >
+  		
+  		<TableRow>
+  				<!-- 
+  			<ImageView
+  				android:src="@drawable/cross" />	
+  			
+  			<TextView
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:text="# Contacts blacklisted: "
+ />
+  				
+  			<TextView
+  				android:id="@+id/txt_number_blacklisted"
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:text="" />
+  				 -->
+  		</TableRow>
+  	
+  	</TableLayout>
+ 
+</RelativeLayout>

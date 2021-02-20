@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:myapp="http://schemas.android.com/apk/res/com.reptilesoft.callcenterpro"
+  	android:layout_width="fill_parent"
+  	android:layout_height="150dip">
+
+	<com.admob.android.ads.AdView
+			android:id="@+id/admob_ad"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			myapp:backgroundColor="#000000"
+			myapp:primaryTextColor="#FFFFFF"
+			myapp:secondaryTextColor="#CCCCCC" />
+	<!-- 
+	<Button
+		android:id="@+id/button_ok_close_ad"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/admob_ad"
+		android:paddingTop="10dip"
+		android:text="close advert">
+	</Button>
+	 -->
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.reptilesoft.callcenterpro"
+      android:versionCode="23" android:versionName="1.8.3">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".CallCenter"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".TabPhoneProfiles"></activity>
+		<activity android:name=".TabBlackList"></activity>
+		<activity 
+			android:name=".Activator"
+			android:theme="@android:style/Theme.Dialog">
+		</activity>
+		<activity android:name=".TabCallCenter" />
+		<activity android:name=".TabTimedProfile"
+			android:label="Timed profiles" >
+			</activity>
+			<activity android:name=".NewTimedProfile"
+			android:label="New timed profile" >
+			</activity>
+		<activity android:name=".AddProfile"
+			android:label="Add a new profile" >
+			<!-- android:theme="@android:style/Theme.Dialog">  -->
+		</activity>
+		<activity android:name=".EditProfile"
+			android:label="Edit profile" >
+			<!-- android:theme="@android:style/Theme.Dialog">  -->
+		</activity>
+		<activity 
+			android:name=".DeliverAd"
+			android:label="Advertising; a necessary evil..."
+			android:theme="@android:style/Theme.Dialog" />
+		<activity android:name=".About"
+			android:theme="@android:style/Theme.Dialog" />
+		<activity android:name=".Prefs"
+			android:label="Call Center Preferences" />
+			
+		<service android:name=".CallCenterService" />
+		
+		<receiver android:name=".TimedReceiver">
+			<intent-filter>
+            	<!-- <action android:name="android.intent.action.BOOT_COMPLETED"/> -->
+            </intent-filter>
+		</receiver>
+		
+		<!-- The application's publisher ID assigned by AdMob -->
+<meta-data android:value="" android:name="ADMOB_PUBLISHER_ID" />
+<!-- AdMobActivity definition -->
+<activity android:name="com.admob.android.ads.AdMobActivity"
+android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+android:configChanges="orientation|keyboard|keyboardHidden" />
+<!-- Track Market installs -->
+<receiver android:name="com.admob.android.ads.analytics.InstallReceiver"
+android:exported="true">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER" />
+</intent-filter>
+</receiver>
+<meta-data android:value="true" android:name="ADMOB_ALLOW_LOCATION_FOR_ADS"/>
+    </application>
+<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+<!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>  -->
+<uses-permission android:name="android.permission.WRITE_CONTACTS"></uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+<!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+<uses-sdk android:targetSdkVersion="6" android:minSdkVersion="6"></uses-sdk>
+</manifest> 

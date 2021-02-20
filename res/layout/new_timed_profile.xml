@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:padding="15dip">
+  
+  <ScrollView
+  		android:layout_width="fill_parent"
+	  	android:layout_height="fill_parent">
+	  	<TableLayout
+	  		android:layout_width="fill_parent"
+	  		android:layout_height="fill_parent">
+	  			<TableRow
+	  				android:layout_width="wrap_content"
+	  				android:layout_height="fill_parent">
+					  <Spinner
+					  	android:id="@+id/spinner_timed_profile"
+					  	android:layout_width="wrap_content"
+					  	android:layout_height="wrap_content"
+					  	android:prompt="@string/prompt_select_profile">
+					  </Spinner>
+				</TableRow>
+				<TableRow  
+					android:layout_width="wrap_content"
+	  				android:layout_height="fill_parent">
+					  <TimePicker
+					  	android:id="@+id/time_picker"
+					  	android:layout_width="fill_parent"
+					  	android:layout_height="wrap_content"
+					  	android:layout_below="@id/spinner_timed_profile">
+					  </TimePicker>
+				</TableRow>
+			  	
+			  	<TableLayout
+	  				android:layout_width="fill_parent"
+	  				android:layout_height="fill_parent">
+	  				<TableRow
+	  					android:layout_width="wrap_content"
+	  					android:layout_height="fill_parent">
+	  					<CheckBox
+						  	android:id="@+id/checkbox_all"
+							
+						  	android:layout_width="wrap_content"
+						  	android:layout_height="wrap_content"
+						  	android:text="All">
+					  	</CheckBox>
+	  					<CheckBox
+						  	android:id="@+id/checkbox_monday"
+						  	android:layout_width="wrap_content"
+						  	android:layout_height="wrap_content"
+						  	android:text="Mo">
+					  </CheckBox>
+					  <CheckBox
+						  	android:id="@+id/checkbox_tuesday"
+
+						  	android:layout_width="wrap_content"
+						  	android:layout_height="wrap_content"
+						  	android:text="Tu">
+					  </CheckBox>
+					  <CheckBox
+						  	android:id="@+id/checkbox_wednesday"
+
+						  	android:layout_width="wrap_content"
+						  	android:layout_height="wrap_content"
+						  	android:text="We">
+					  </CheckBox>
+	  				</TableRow>
+	  				
+	  			<TableRow
+  					android:layout_width="wrap_content"
+  					android:layout_height="fill_parent">
+				  		<CheckBox
+							android:id="@+id/checkbox_thursday"
+						  	android:layout_width="wrap_content"
+						  	android:layout_height="wrap_content"
+						  	android:text="Th">
+				  		</CheckBox>
+				  		<CheckBox
+					  	android:id="@+id/checkbox_friday"
+
+					  	android:layout_width="wrap_content"
+					  	android:layout_height="wrap_content"
+					  	android:text="Fr">
+				  </CheckBox>
+				  <CheckBox
+					  	android:id="@+id/checkbox_saturday"
+
+					  	android:layout_width="wrap_content"
+					  	android:layout_height="wrap_content"
+					  	android:text="Sa">
+				  </CheckBox>
+				  <CheckBox
+					  	android:id="@+id/checkbox_sunday"
+
+					  	android:layout_width="wrap_content"
+					  	android:layout_height="wrap_content"
+					  	android:text="Su">
+				  </CheckBox>
+				</TableRow>
+				<TableRow
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+						<Button
+						  	android:id="@+id/button_submit_timed_profile"
+						  	android:layout_width="fill_parent"
+						  	android:layout_height="wrap_content"
+						  	android:text="submit">
+						</Button>
+				</TableRow>
+					
+	  			</TableLayout>
+			  		
+	  </TableLayout>
+	  
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <ScrollView
+    
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+		
+		<RelativeLayout
+			
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:paddingLeft="5dip"
+			android:paddingRight="35dip" >
+    		
+    		<TableLayout
+    			
+    			android:id="@+id/tbl_ringer_mode"
+    		
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content">
+    			
+    			<EditText
+    				
+    					android:id="@+id/edit_name"
+    					
+    					android:layout_width="fill_parent"
+    					android:layout_height="wrap_content"
+    					
+    					android:text="Enter a name"
+    					
+    					android:inputType="textCapWords" />
+    			
+    			<TableRow>
+    					
+    					<Spinner
+    	
+			    			android:id="@+id/spinner_ringer_mode"
+			    		
+			    			android:layout_width="wrap_content"
+			    			android:layout_height="wrap_content"
+			    			
+			    			android:prompt="@string/prompt_ringer_mode" />
+    			
+    			</TableRow>
+    			
+    		</TableLayout>
+    			
+    		<ImageView
+    		
+    				android:id="@+id/img_levels"
+    				
+    				android:src="@drawable/levels"
+    				
+    				android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+    				android:layout_below="@id/tbl_ringer_mode" />
+    				
+    		<TextView
+    			
+    			android:id="@+id/txt_levels"
+    			
+    			android:text="Volume levels"
+    			android:layout_below="@id/tbl_ringer_mode"
+    			android:layout_toRightOf="@id/img_levels"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content" />
+    		
+    		<TextView
+    			
+    			android:id="@+id/txt_ringer"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/img_levels"
+    			
+    			android:text="Ringer volume: " />
+    			
+    		<TextView
+    		
+    			android:id="@+id/txt_ringer_value"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			
+    			android:layout_below="@id/img_levels"
+    			android:layout_toRightOf="@id/txt_ringer" />
+    			
+    		<SeekBar
+    			
+    			android:id="@+id/sb_ringer"
+    			
+    			android:layout_below="@id/txt_ringer"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" />
+    			
+    			
+    		<TextView
+    			
+    			android:id="@+id/txt_notification"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/sb_ringer"
+    			
+    			android:text="Notification volume: " />
+    			
+    		<TextView
+    		
+    			android:id="@+id/txt_notif_value"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			
+    			android:layout_below="@id/sb_ringer"
+    			android:layout_toRightOf="@id/txt_notification" />
+    	
+    		<SeekBar
+    			
+    			android:id="@+id/sb_notification"
+    			
+    			android:layout_below="@id/txt_notification"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" />
+    			
+    		<TextView
+    			
+    			android:id="@+id/txt_media"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/sb_notification"
+    			
+    			android:text="Media volume: " />
+    			
+    		<TextView
+    		
+    			android:id="@+id/txt_media_value"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			
+    			android:layout_below="@id/sb_notification"
+    			android:layout_toRightOf="@id/txt_media" />
+    	
+    		<SeekBar
+    			
+    			android:id="@+id/sb_media"
+    			
+    			android:layout_below="@id/txt_media"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" />
+    			
+    		<TextView
+    			
+    			android:id="@+id/txt_voice"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/sb_media"
+    			
+    			android:text="Voice volume: " />
+    			
+    		<TextView
+    		
+    			android:id="@+id/txt_voice_value"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			
+    			android:layout_below="@id/sb_media"
+    			android:layout_toRightOf="@id/txt_voice" />
+    	
+    		<SeekBar
+    			
+    			android:id="@+id/sb_voice"
+    			
+    			android:layout_below="@id/txt_voice"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" />
+    			
+    		<TextView
+    			
+    			android:id="@+id/txt_alarm"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/sb_voice"
+    			
+    			android:text="Alarm volume: " />
+    			
+    		<TextView
+    		
+    			android:id="@+id/txt_alarm_value"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			
+    			android:layout_below="@id/sb_voice"
+    			android:layout_toRightOf="@id/txt_alarm" />
+    	
+    		<SeekBar
+    			
+    			android:id="@+id/sb_alarm"
+    			
+    			android:layout_below="@id/txt_alarm"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" />
+    			
+    		<TextView
+    			
+    			android:id="@+id/txt_system"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_below="@id/sb_alarm"
+    			
+    			android:text="System volume: " />
+    			
+    		<TextView
+    		
+    			android:id="@+id/txt_system_value"
+    			
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			
+    			android:layout_below="@id/sb_alarm"
+    			android:layout_toRightOf="@id/txt_system" />
+    	
+    		<SeekBar
+    			
+    			android:id="@+id/sb_system"
+    			
+    			android:layout_below="@id/txt_system"
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content" />
+    			
+    		<CheckBox
+    			android:id="@+id/chk_custom_ringtone"
+    			android:layout_below="@id/sb_system"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="Cust. ring.">
+    		</CheckBox>
+    		
+    		<ImageButton
+    			android:id="@+id/img_ringtone"
+    			android:layout_below="@id/sb_system"
+    			android:layout_toRightOf="@id/chk_custom_ringtone"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:src="@drawable/music" />
+    				
+    		<TextView
+    			android:id="@+id/txt_selected_ringtone"
+    			android:layout_toRightOf="@id/img_ringtone"
+    			android:layout_below="@id/sb_system"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="Silent" />
+    			
+    		<CheckBox
+    			android:id="@+id/chk_custom_notification"
+    			android:layout_below="@id/chk_custom_ringtone"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="Cust. notif.">
+    		</CheckBox>
+    		
+    		<ImageButton
+    			android:id="@+id/img_notification"
+    			android:layout_below="@id/img_ringtone"
+    			android:layout_toRightOf="@id/chk_custom_notification"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:src="@drawable/music" />
+    		
+    		<TextView
+    			android:id="@+id/txt_selected_notification"
+    			android:layout_toRightOf="@id/img_notification"
+    			android:layout_below="@id/img_ringtone"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="Silent" />
+    			
+    			
+    		<TableLayout
+    			
+    			android:layout_below="@id/img_notification"
+    			
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content">
+    			
+    				<TableRow android:gravity="center" >
+    			
+    					<ImageView
+    					
+    						android:src="@drawable/sun" />
+    					
+    						<TextView
+    							
+    							android:id="@+id/txt_brightness"
+    						
+    							android:layout_width="fill_parent"
+    							android:layout_height="wrap_content"
+    							
+    							android:text="Brightness: " />
+    							
+    						<TextView
+    		
+    							android:id="@+id/txt_brightness_value"
+    			
+    							android:layout_width="wrap_content"
+    							android:layout_height="wrap_content" />
+    				</TableRow>
+    				
+    				<CheckBox
+    					android:id="@+id/chk_brightness"
+    					android:layout_width="wrap_content"
+    					android:layout_height="wrap_content"
+    					android:text="Customize brightness">
+    				</CheckBox>
+    				
+    				<SeekBar
+    					android:id="@+id/sb_brightness"
+    					android:layout_width="fill_parent"
+    					android:layout_height="wrap_content"
+    					android:visibility="invisible" />
+    			
+    				<TableRow android:gravity="center">
+    					
+    					<ImageView
+    						
+    						android:src="@drawable/no" />
+    						
+						<TextView
+						
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							
+							android:text="Connectivity" />
+    						
+    				</TableRow>
+    				
+    				<ToggleButton
+    					
+    					android:id="@+id/tgl_airplane"
+    					
+    					android:layout_width="wrap_content"
+    					android:layout_height="wrap_content"
+    					
+    					android:textOn="Airplane mode on"
+    					android:textOff="Airplane mode off" />
+    				
+    				<ToggleButton
+    					
+    					android:id="@+id/tgl_wifi"
+    					
+    					android:layout_width="wrap_content"
+    					android:layout_height="wrap_content"
+    					
+    					android:textOn="Wifi on"
+    					android:textOff="Wifi off" />
+    					
+    					<Button
+    
+    	android:id="@+id/btn_save"
+    	
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	
+    	android:text="Save profile" />
+    		</TableLayout>
+    	
+    	</RelativeLayout>
+    
+    </ScrollView>
+ 
+</RelativeLayout>
